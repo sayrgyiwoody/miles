@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Reveal Test</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="./images/icon.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+  <body>
+    <section class="sec-1">
+      <div class="container">
+        <h2 class="main-title">Reveal Elements On Scroll</h2>
+        <div class="content">
+          <div class="img-container">
+            <img src="./images/sec-4.jpg" />
+          </div>
+          <div class="text-box">
+            <h3 class="sec-1-title">
+              Heading Lorem
+            </h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, aspernatur distinctio dolorem eligendi necessitatibus provident quae odit dolore, corrupti debitis inventore? Voluptate delectus ab temporibus aliquid eos inventore adipisci, perferendis incidunt repellat eveniet, aut autem totam reiciendis quaerat hic fugit, earum velit repudiandae architecto consectetur. At esse nam excepturi tempore itaque porro praesentium corrupti similique impedit ratione, sunt, consequuntur, quam repudiandae cupiditate laborum consequatur voluptatibus! Labore neque repudiandae quos totam.
+            </p>
+          </div>
+        </div>
+        <div class="media-icons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </section>
+    <section class="sec-2">
+        <div class="container">
+            <h3 class="section-title">Lorem Ipsum</h3>
+            <div class="content">
+                <div class="img-container">
+                    <img src="./images/sec-2.jpg" alt="">
+                </div>
+                <div class="info">
+                    <h4 class="info-title">
+                        Description
+                    </h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium tenetur assumenda adipisci vero officia ex expedita ducimus incidunt dicta, possimus architecto sequi optio veniam modi molestias, reiciendis unde dignissimos. Sed beatae ullam veniam, voluptas numquam illo laboriosam labore dicta voluptatem minus explicabo in blanditiis vitae laudantium porro commodi exercitationem a!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec-3">
+        <div class="container">
+            <div class="main-title">Lorem Ipsum</div>
+            <div class="content">
+                <div class="media-info">
+                    <li><a href=""><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                    <li><a href=""><i class="fa-brands fa-youtube"></i> Youtube</a></li>
+                    <li><a href=""><i class="fa-brands fa-linkedin"></i> Linkedin</a></li>
+                </div>
+                <div class="img-container"><img src="./images/sec-3.jpg" alt=""></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Common reveal option to create reveal animations
+        ScrollReveal({
+            // reset:true,
+            distance : '60px',
+            duration: 2000,
+            delay:400,
+        });
+
+        // target elements and specify options to create reveal animations
+        ScrollReveal().reveal('.main-title,.section-title',{ delay : 500 , origin : 'left'});
+        ScrollReveal().reveal('.sec-1 .img-container, .info',{delay : 600 , origin : 'bottom'});
+        ScrollReveal().reveal('.text-box',{delay : 700 , origin : 'right'});
+        ScrollReveal().reveal('.media-icons i',{delay:500, origin : 'bottom', interval : 200})
+        ScrollReveal().reveal('.sec-2 img , .sec-3 img',{delay:500 , origin : 'top'});
+        ScrollReveal().reveal('.sec-3 li',{delay:500, origin : 'left', interval : 200});
+    </script>
+  </body>
+</html>
